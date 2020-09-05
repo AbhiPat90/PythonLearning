@@ -1,0 +1,84 @@
+---------------------------
+# For Mac User:
+---------------------------
+Usually on Mac machine, python is already installed, to verify follow below steps.
+1. Open Terminal window
+2. $python --version
+3. Enter
+you will get the version of python already installed on you Masintosh machine as: 
+Python 2.7.*
+
+To know where it is located in your machine:
+1. $ which python
+/Library/Framework/python.framework/....
+
+Now, To install an updated version:
+1. Go to https://www.python.org/downloads/
+  you will find latest version available for Mac OS
+2. Click on "Download Python 3.X.X"
+Consider here for example I have downloaded Python 3.8.5
+3. Once download is complete, "python-3.8.5-macosx10.9.pkg" you will find under Downloads section.
+4. Make a double click on "python-3.8.5-macosx10.9.pkg"
+5. Install Python Window popup gets appear, Proceed with simple steps of installation. 
+
+And You are Done..!!
+
+Now to confirm.
+1. Open Terminal window
+2. $python --version
+Python 2.7.*     --> Oops still you are able to see Python 2.7.* version. This is just because your machine still have both installations and PATH is default set to Python 2.7.*
+
+Hence:
+3. $python3 --version
+Python 3.8.5
+
+To know where it is located in your machine:
+1. $ which python3
+/Library/Framework/Python.framework/....
+
+To start working with Python Interpreter
+$python3
+Python 3.8.3 (default, Jul  2 2020, 11:26:31) 
+[Clang 10.0.0 ] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+
+======================================== apart from installations ====================
+Since MOST OF US, are habitual to start openeing the interpreter just by using $python, the question appears here is:
+Q: how can I use Python latest version then or make a new python  version as default one...?
+solution --> Either you need to start habitual to use $python3 or set a PATH
+
+To set a PATH: Open Terminal
+1. $ nano ~/.bash_profile
+  -> This will open up bash_profile in vi editor
+2. Press I  --> To go in Insert mode
+3. Write below
+  # Setting PATH for Python 3.8
+  # The original version is saved in .bash_profile.pysave
+  PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
+  export PATH
+  
+  or Type
+  alias python = python3
+
+4. Ctrl + X
+5. Y
+6. Enter
+
+You will get exiut from vi editor and come back to Terminal
+$python
+Python 3.8.3 (default, Jul  2 2020, 11:26:31) 
+[Clang 10.0.0 ] :: Anaconda, Inc. on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+
+============================================================================================================================================
+
+  
+
+
+
+
+
+
+
